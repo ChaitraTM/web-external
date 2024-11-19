@@ -1,0 +1,146 @@
+/* Reset and Global Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Navigation */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #ff5a5f;
+}
+
+/* Explore Section */
+.explore-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.explore-section h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.explore-section p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards 0.5s;
+}
+
+/* Destination Grid */
+.destination-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.destination {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 30%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination img {
+    width: 100%;
+    height: auto;
+}
+
+.destination h3 {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.destination p {
+    padding: 0 1rem 1rem;
+    color: #777;
+}
+
+/* Hover Effects */
+.destination:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .destination-container {
+        justify-content: center;
+    }
+
+    .destination {
+        width: 45%;
+    }
+
+    .explore-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .explore-section p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .destination {
+        width: 100%;
+    }
+
+    .explore-section h1 {
+        font-size: 2rem;
+    }
+
+    .explore-section p {
+        font-size: 0.9rem;
+    }
+}
